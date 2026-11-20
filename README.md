@@ -1,0 +1,2 @@
+# tumar_globall
+stick
