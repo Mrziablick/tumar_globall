@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f5b900">
+  <title>Кабинет волонтёра — Tumar Global</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div data-site-header></div>
+  <main class="wrap inner-page dashboard-page">
+    <section class="page-hero dashboard-intro"><span class="eyebrow">TUMAR GLOBAL / VOLUNTEER SPACE</span><h1>Твоё место<br><span>в команде.</span></h1><p>Создай профиль, выбери событие и следи за своими заявками здесь.</p></section>
+    <section class="dashboard-grid">
+      <div class="dashboard-main">
+        <section class="surface profile-box"><div class="section-heading compact"><div><span class="eyebrow">01 / МОЙ ПРОФИЛЬ</span><h2 id="profileHeading">Знакомимся?</h2></div><span class="profile-state" id="profileState">НЕТ ПРОФИЛЯ</span></div>
+          <form id="profileForm" class="profile-form">
+            <label>Как тебя зовут?<input name="name" autocomplete="name" placeholder="Например, Алина" required maxlength="50"></label>
+            <div class="form-pair"><label>Сколько тебе лет?<input name="age" type="number" min="14" max="99" placeholder="18" required></label><label>Пол для подсчёта мест<select name="gender"><option value="">Не указывать</option><option value="girl">Девушка</option><option value="boy">Мальчик</option></select></label></div>
+            <label>Опыт волонтёрства<select name="experience"><option value="none">Пока без опыта</option><option value="some">Есть небольшой опыт</option><option value="experienced">Участвовал(а) раньше</option></select></label>
+            <label class="check-line"><input name="consent" type="checkbox" required><span>Я согласен(на) с тем, что данные анкеты сохраняются в этом браузере для работы демонстрационного прототипа.</span></label>
+            <button class="button button-dark" type="submit">Сохранить профиль <span>↗</span></button><p class="form-message" id="profileMessage" role="status"></p>
+          </form>
+        </section>
+        <section class="events-section"><div class="section-heading compact"><div><span class="eyebrow">02 / ВЫБИРАЙ СВОЁ</span><h2>События команды</h2></div><span class="event-filter-label">ПОДБОР ПО АНКЕТЕ</span></div><div class="event-list" id="eventList"></div></section>
+        <section class="events-section"><div class="section-heading compact"><div><span class="eyebrow">03 / ТВОЙ ПЛАН</span><h2>Мои события</h2></div></div><div id="myEvents" class="my-events"></div></section>
+      </div>
+      <aside class="dashboard-aside">
+        <section class="qr-card"><span class="eyebrow">ЛИЧНЫЙ ПРОПУСК</span><h3>Твой QR-код</h3><p>Покажи его координатору на событии для отметки.</p><div id="qrCode" class="qr-code" aria-label="Личный QR-код"><span>СОЗДАЙ ПРОФИЛЬ</span></div><small id="volunteerId">Появится после регистрации</small></section>
+        <section class="side-card"><span class="eyebrow">ПОМОЩЬ</span><h3>Вопросы?</h3><p>Собрали короткие ответы о заявках, чате и событиях.</p><a class="text-link" href="FAQ.html">Открыть FAQ <span>↗</span></a></section>
+        <section class="side-card chat-side-card"><span class="eyebrow">ТВОЯ КОМАНДА</span><h3>Чат события</h3><p>Появится после того, как организаторы подтвердят участие.</p><a class="text-link" href="chat.html">Перейти в чат <span>↗</span></a></section>
+      </aside>
+    </section>
+    <p class="prototype-note"><b>Демонстрационный прототип.</b> Данные хранятся только в локальном браузере, заявка не отправляется организаторам. Демонстрационные события и лимиты нужно заменить на подтверждённое расписание.</p>
+  </main>
+  <div data-site-footer></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" referrerpolicy="no-referrer"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
